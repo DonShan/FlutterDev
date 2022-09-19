@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:loginview/user_list/view_models/user_view_model.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,6 +18,8 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    //View Model Instance
+    UserViewModel userViewModel = context.watch<UserViewModel>();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
